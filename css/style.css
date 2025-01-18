@@ -4,7 +4,9 @@
 }
 
 body {
-  background-color: #1e1e2e;
+  background-image: url("../img/background.png");
+  background-size: 100%;
+  background-attachment: fixed;
   font-family: 'JetBrainsMono';
   margin: 0;
 }
@@ -34,18 +36,12 @@ a:hover {
   color: #6c7086;
 }
 
-.divider1 {
+.divider {
   height: 0.25vh;
-  background-image: linear-gradient(90deg, #cdd6f4, #1e1e2e);
+  background-image: linear-gradient(90deg, #1e1e2e, #cdd6f4, #1e1e2e);
 }
 
-.divider2 {
-  height: 0.25vh;
-  background-image: linear-gradient(90deg, #1e1e2e, #cdd6f4);
-}
-
-.segment1 {
-  background-image: linear-gradient(45deg, #1e1e2e, #313244);
+.segment {
   padding: 5vw;
   display: flex;
   gap: 25vw;
@@ -53,21 +49,7 @@ a:hover {
   align-items: center;
 }
 
-.segment1 p {
-  max-width: 40ch;
-  text-align: center;
-}
-
-.segment2 {
-  background-image: linear-gradient(45deg, #313244, #1e1e2e);
-  padding: 5vw;
-  display: flex;
-  gap: 25vw;
-  justify-content: center;
-  align-items: center;
-}
-
-.segment2 p {
+.segment p {
   max-width: 40ch;
   text-align: center;
 }
