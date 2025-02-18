@@ -24,6 +24,7 @@ p {
 
 a {
   color: #89b4fa;
+  text-decoration: none;
   transition: 0.25s;
 }
 
@@ -33,7 +34,7 @@ a:hover {
 }
 
 img {
-  width: 10%;
+  width: 50%;
   border-radius: 2rem;
   box-shadow: 0 0.5rem 1rem #11111b;
   transition: 500ms;
@@ -58,13 +59,13 @@ img:hover {
 .segment {
   padding: 2rem;
   display: flex;
-  gap: 25vw;
+  gap: 10vw;
   justify-content: center;
   align-items: center;
 }
 
 .segment p {
-  max-width: 80ch;
+  /*max-width: 80ch;*/
   text-align: center;
 }
 
