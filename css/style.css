@@ -1,31 +1,35 @@
 @font-face {
   font-family: "JetBrainsMono";
-  src: url("../fonts/JetBrainsMonoNerdFont-Regular.ttf");
+  src: url("../fonts/JetBrainsMonoNerdFont-Regular.ttf") format("truetype");
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-image: url("../img/background.png");
-  background-size: 100%;
-  background-attachment: fixed;
-  font-family: 'JetBrainsMono';
-  margin: 0;
+  background: url("../img/background.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'JetBrainsMono', monospace;
 }
 
 h1 {
   color: #cdd6f4;
   text-align: center;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 p {
   color: #cdd6f4;
-  font-size: 1em;
+  font-size: 1.1rem;
 }
 
 a {
   color: #89b4fa;
   text-decoration: none;
-  transition: 0.25s;
+  transition: 250ms;
 }
 
 a:hover {
@@ -37,7 +41,7 @@ img {
   width: 50%;
   border-radius: 2rem;
   box-shadow: 0 0.5rem 1rem #11111b;
-  transition: 500ms;
+  transition: 250ms;
 }
 
 img:hover {
@@ -45,22 +49,22 @@ img:hover {
   box-shadow: 0 1rem 1.5rem #11111b;
 }
 
-.dim {
-  color: #6c7086;
-}
-
-.divider {
+hr {
   margin-left: 10%;
   width: 80%;
-  height: 0.25vh;
+  height: 2px;
   background-image: linear-gradient(90deg, #1e1e2e00, #cdd6f4, #1e1e2e00);
+  border: none;
+}
+
+.dim {
+  color: #6c7086;
 }
 
 .segment {
   padding: 2rem;
   display: flex;
-  gap: 10vw;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -77,17 +81,44 @@ img:hover {
   box-shadow: 0 0.5rem 1rem #11111b;
 }
 
+.entry-segment {
+  padding: 1px;
+  margin-bottom: 5rem;
+  border-bottom: 2px solid#cdd6f4;
+  box-shadow: 0 0.5rem 1rem #11111b;
+  height: 100vh;
+  background-color: #11111b7f;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.entry-segment p {
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  hr {
+    display: none;
   }
 
   .segment {
-    gap: 5vw;
-    flex-direction: column;
+    gap: 3vw;
   }
 
   .card {
-    margin: 5rem 3vw;
+    margin: 3rem 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 }
