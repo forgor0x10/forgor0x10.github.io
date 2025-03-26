@@ -1,6 +1,20 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
 @font-face {
   font-family: "JetBrainsMono";
   src: url("../fonts/JetBrainsMonoNerdFont-Regular.ttf") format("truetype");
+}
+
+@keyframes fade-in-up {
+  0% {
+    filter: blur(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 100%;
+  }
 }
 
 body,
@@ -13,6 +27,7 @@ body {
   background: url("../img/background.png") no-repeat center center fixed;
   background-size: cover;
   font-family: 'JetBrainsMono', monospace;
+  animation: 1s fade-in-up;
 }
 
 h1 {
@@ -38,7 +53,7 @@ a:hover {
 }
 
 img {
-  width: 50%;
+  max-width: 100%;
   border-radius: 2rem;
   box-shadow: 0 0.5rem 1rem #11111b;
   transition: 250ms;
@@ -49,6 +64,11 @@ img:hover {
   box-shadow: 0 1rem 1.5rem #11111b;
 }
 
+img:active {
+  transform: translateY(0.1rem);
+  box-shadow: 0 0.4rem 1.5rem #11111b;
+}
+
 hr {
   margin-left: 10%;
   width: 80%;
@@ -57,12 +77,56 @@ hr {
   border: none;
 }
 
+button {
+  font-family: "JetBrainsMono";
+  cursor: pointer;
+  font-size: 1rem;
+  color: #1e1e2e;
+  padding: 0.5rem 3rem;
+  background-color: #cdd6f4;
+  border: 2px solid #cdd6f4;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem #11111b80;
+  margin: 1rem;
+  transition: 250ms;
+}
+
+button:hover {
+  color: #cdd6f4;
+  background-color: #11111b40;
+}
+
+button:active {
+  background-color: #11111b80;
+  color: #a6adc8;
+  border: 2px solid #a6adc8;
+}
+
+.icon-button {
+  color: #cdd6f4;
+  font-size: 5rem;
+  transition: 250ms;
+}
+
+.icon-button:hover {
+  color: #ffffff;
+  text-shadow: 0 0 1rem #cdd6f4;
+  font-size: 5rem;
+}
+
+.icon-button:active {
+  color: #cdd6f4;
+  text-shadow: 0 0 0.5rem #cdd6f4;
+  font-size: 5rem;
+}
+
 .dim {
   color: #6c7086;
 }
 
 .segment {
   padding: 2rem;
+  gap: 3rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -71,6 +135,10 @@ hr {
 .segment p {
   /*max-width: 80ch;*/
   text-align: center;
+}
+
+.segment>div {
+  width: 50%;
 }
 
 .card {
@@ -90,8 +158,12 @@ hr {
   background-color: #11111b7f;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   flex-direction: column;
+}
+
+.entry-segment h1 {
+  margin-bottom: 0;
 }
 
 .entry-segment p {
@@ -120,5 +192,9 @@ hr {
     border-radius: 0;
     border-left: none;
     border-right: none;
+  }
+
+  .buttons-container {
+    flex-direction: column;
   }
 }
