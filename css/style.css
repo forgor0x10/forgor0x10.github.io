@@ -5,15 +5,13 @@
   src: url("../fonts/JetBrainsMonoNerdFont-Regular.ttf") format("truetype");
 }
 
-@keyframes fade-in-up {
+@keyframes fade-in {
   0% {
     filter: blur(1rem);
-    opacity: 0;
   }
 
   100% {
     filter: blur(0);
-    opacity: 100%;
   }
 }
 
@@ -27,7 +25,7 @@ body {
   background: url("../img/background.png") no-repeat center center fixed;
   background-size: cover;
   font-family: 'JetBrainsMono', monospace;
-  animation: 1s fade-in-up;
+  animation: 1s fade-in;
 }
 
 h1 {
@@ -94,37 +92,40 @@ button {
 button:hover {
   color: #cdd6f4;
   background-color: #11111b40;
+  transform: translateY(-0.2rem);
 }
 
 button:active {
   background-color: #11111b80;
   color: #a6adc8;
   border: 2px solid #a6adc8;
+  outline: 2px solid #a6adc8;
+  transform: translateY(0);
 }
 
 .icon-button {
   color: #cdd6f4;
-  font-size: 5rem;
+  font-size: 3rem;
   transition: 250ms;
 }
 
 .icon-button:hover {
   color: #ffffff;
   text-shadow: 0 0 1rem #cdd6f4;
-  font-size: 5rem;
+  transform: translateY(-0.2rem);
 }
 
 .icon-button:active {
   color: #cdd6f4;
   text-shadow: 0 0 0.5rem #cdd6f4;
-  font-size: 5rem;
+  transform: translateY(0);
 }
 
 .dim {
   color: #6c7086;
 }
 
-.segment {
+.flex-box {
   padding: 2rem;
   gap: 3rem;
   display: flex;
@@ -132,27 +133,31 @@ button:active {
   align-items: center;
 }
 
-.segment p {
-  /*max-width: 80ch;*/
+.flex-box p {
   text-align: center;
 }
 
-.segment>div {
+.flex-box>div {
   width: 50%;
 }
 
 .card {
-  background-color: #11111b20;
+  background-color: #11111b40;
   border: 2px solid #cdd6f4;
   border-radius: 2rem;
-  margin: 5rem 25vw;
+  margin: 5rem 10vw;
   box-shadow: 0 0.5rem 1rem #11111b;
+  transition: 250ms;
 }
 
-.entry-segment {
-  padding: 1px;
+.card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 1rem #11111b;
+}
+
+.hero {
   margin-bottom: 5rem;
-  border-bottom: 2px solid#cdd6f4;
+  border-bottom: 2px solid #cdd6f4;
   box-shadow: 0 0.5rem 1rem #11111b;
   height: 100vh;
   background-color: #11111b7f;
@@ -160,14 +165,6 @@ button:active {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.entry-segment h1 {
-  margin-bottom: 0;
-}
-
-.entry-segment p {
-  text-align: center;
 }
 
 @media (max-width: 640px) {
@@ -183,7 +180,7 @@ button:active {
     display: none;
   }
 
-  .segment {
+  .flex-box {
     gap: 3vw;
   }
 
@@ -192,9 +189,5 @@ button:active {
     border-radius: 0;
     border-left: none;
     border-right: none;
-  }
-
-  .buttons-container {
-    flex-direction: column;
   }
 }
