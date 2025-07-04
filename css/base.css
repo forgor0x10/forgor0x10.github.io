@@ -1,0 +1,105 @@
+body {
+  background-color: var(--ctp-base);
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 5rem 5rem;
+  background-repeat: repeat;
+  animation: background-animation 5s linear infinite;
+  margin: 0;
+  color: var(--ctp-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE and Edge (Literally who uses them?) */
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  /* Chrome, Safari, Opera */
+  display: none;
+}
+
+*.spacing {
+  padding-bottom: 1rem;
+}
+
+ul.spacing>* {
+  padding-bottom: 1rem;
+}
+
+h1,
+h2,
+p,
+li {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: "Nunito";
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p,
+li {
+  font-family: "JetBrains Mono";
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ctp-blue);
+  background-image: linear-gradient(transparent calc(100% - 1px), var(--ctp-blue) 1px);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: 250ms;
+}
+
+a:hover {
+  background-size: 100% 100%;
+}
+
+footer h2,
+footer p,
+header h1,
+header p {
+  color: var(--ctp-base);
+}
+
+footer a {
+  color: var(--ctp-base);
+  background-image: linear-gradient(transparent calc(100% - 1px), var(--ctp-base) 1px);
+}
+
+hr {
+  background-color: var(--ctp-text);
+  border: none;
+  width: 75%;
+  height: 1px;
+}
+
+img {
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}

@@ -3,80 +3,159 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>~/forgor</title>
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>/home/forgor0x10</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="hero">
-    <div class="flex-box">
-      <div>
-        <h1>hi</h1>
-      </div>
-      <div>
-        <img src="img/bobam.gif">
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="flex-box">
-      <p>
-        Bored creature<br>
-        UTC +5<br>
-        I make programs, games and music <span class="dim">(Sometimes)</span><br>
-        I play Ultrakill and Hollow Knight on daily basis because I hate myself<br>
-        I also develop in C/C++ because I also hate myself<br>
-        I also also use neovim because I also also hate myself<br>
-        <br>
-        Links and socials below
-      </p>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="card">
-    <div class="flex-box">
-      <h1> Links</h1>
-      <p>
-        <a target="_blank" href="https://discord.com/users/954606816820613160"> Discord</a><br>
-        <a target="_blank" href="https://github.com/danilaxila3/">󰊤 GitHub</a><br>
-        <a target="_blank" href="https://danilaxila3.itch.io/"> itch.io</a><br>
-        <a target="_blank" href="https://www.youtube.com/@goober5752">󰗃 YouTube</a><br>
-      </p>
-    </div>
-
-    <hr>
-
-    <div class="flex-box">
-      <h1> Projects</h1>
-      <p>
-        <a target="_blank" href="https://sorg-org.github.io">󰊤 sOrg</a><br>
-        <a target="_blank" href="https://github.com/danilaxila3/danilaxila3">󰊤 This website</a><br>
-      </p>
-    </div>
-
-    <hr>
-
-    <div class="flex-box">
-      <h1> Games</h1>
-      <p>
-        <a target="_blank" href="https://danilaxila3.github.io/vistake">󰊤 VISTAKE</a><br>
-        <a target="_blank" href="https://danilaxila3.itch.io/arhgpg"> ARHGPG</a><br>
-      </p>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="flex-box">
+  <header>
     <div>
-      <img src="img/ibuprofen.png" style="width: 15rem;">
-      <p>the snuuy</p>
+      <center>
+        <h1>forgor0x10</h1>
+        <p id="splash-text" class="typewriter">splash-text</p>
+      </center>
+    </div>
+  </header>
+
+  <div id="content-id" class="content">
+    <div>
+      <div class="card">
+        <img id="mewo" src="/img/mewo.gif">
+
+        <h2 class="spacing">Hi</h2>
+
+        <p class="spacing">
+          This is my epic awesome website (Kinda. Can't bother to buy a proper domain)<br>
+          This version was released on July 5th of 2025, while the first version was released on December 7th of 2024
+        </p>
+
+        <p>
+          I'm a russian un*mployed software and game developer<br>
+          I also make (bad) music and (bad) art<br>
+          Still in school
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="spacing">Games (Yay!!)</h2>
+
+        <ul class="spacing">
+          <li>
+            <h2><a target="_blank" href="https://forgor0x10.itch.io/vistake">VISTAKE</a></h2>
+
+            <p>
+              My very own rpg game!! It's really story heavy to a point it would be better to just write a book, but
+              books don't have their own art and soundtrack (mostly) so games are still better<br>
+              I'm still making it and I'm far from finishing. There is a free demo tho (see game links)
+            </p>
+          </li>
+          <li>
+            <h2><a target="_blank" href="https://forgor0x10.itch.io/arhgpg">A. R. H. G. P. G.</a></h2>
+
+            <p>
+              Not much to talk about this one. My first game to actually release, nothing more than a really hard
+              generic platformer game (ha get it)
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="marquee">
+          <h2>Hi Shark!! Hi Arbuz!! Hi Flexx!! Hi Tazik!! Hi Bao!! Hi Yuko!! Hi Kam!! Hi Shvabrik!! Hi Unkver!!</h2>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="spacing">Amen break roulette</h2>
+
+        <p>
+          Press the button below to get one of 20 random amen breaks<br>
+          <a id="amen-break-button" href="javascript:void(0);">Show me!!</a><br>
+        </p>
+        <p id="amen-break-text"></p>
+        <audio id="amen-break-audio"></audio>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <h2 class="spacing">Project links</h2>
+
+        <p>sOrg</p>
+
+        <ul>
+          <li><a target="_blank" href="https://github.com/sOrg-org">Main page</a></li>
+          <li><a target="_blank" href="https://github.com/sOrg-org/sCore">sCore</a></li>
+          <li><a target="_blank" href="https://github.com/sOrg-org/sSML">sSML</a></li>
+          <li><a target="_blank" href="https://github.com/sOrg-org/sMarkup">sMarkup</a></li>
+          <li><a target="_blank" href="https://github.com/sOrg-org/sCSH">sCSH</a></li>
+          <li><a target="_blank" href="https://github.com/sOrg-org/sColScheme">sColScheme</a></li>
+          <li><a target="_blank" href="https://github.com/sOrg-org/sWelcomer">sWelcomer</a></li>
+          <li><a target="_blank" href="https://github.com/sOrg-org/sConfig">sConfig</a></li>
+        </ul>
+
+        <p>Other</p>
+
+        <ul>
+          <li><a target="_blank" href="https://github.com/forgor0x10/forgor0x10.github.io">forgor0x10.github.io</a></li>
+          <li><a target="_blank" href="https://github.com/forgor0x10/peaklang">peaklang</a></li>
+          <li><a target="_blank" href="https://github.com/forgor0x10/scrrain">scrrain</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="spacing">Game links</h2>
+
+        <ul>
+          <li><a target="_blank" href="https://forgor0x10.itch.io/vistake">VISTAKE</a></li>
+          <li><a target="_blank" href="https://forgor0x10.itch.io/vistake-demo">VISTAKE (Free demo)</a></li>
+          <li><a target="_blank" href="https://forgor0x10.itch.io/arhgpg">A. R. H. G. P. G.</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <center>
+          <h2>/img/bobam.gif</h2>
+          <img src="/img/bobam.gif" style="width: 75%;">
+        </center>
+      </div>
     </div>
   </div>
+
+  <footer>
+    <div>
+      <h2 class="spacing">Links</h2>
+
+      <p>
+        <a target="_blank" href="https://discord.com/users/954606816820613160"><i
+            class="nf nf-fa-discord"></i>Discord</a><br>
+        <a target="_blank" href="https://github.com/forgor0x10"><i class="nf nf-fa-github"></i>GitHub</a><br>
+        <a target="_blank" href="https://youtube.com/@forgor0x10"><i class="nf nf-fa-youtube"></i>YouTube</a>
+      </p>
+    </div>
+
+    <div>
+      <h2 class="spacing">Fun stuff</h2>
+
+      <p>
+        <a id="oneko-button" href="javascript:void(0)">Unleash the kitty</a><br>
+        <a id="hue-button" href="javascript:void(0)">edibles.exe</a><br>
+        <a id="debug-button" href="javascript:void(0)">Toggle debug</a>
+      </p>
+    </div>
+  </footer>
+
+  <div id="hue-overlay"></div>
+
+  <script src="/js/oneko.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

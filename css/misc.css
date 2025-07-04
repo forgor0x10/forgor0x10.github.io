@@ -1,0 +1,60 @@
+.typewriter {
+  animation: 1s typewriter-animation ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glow {
+  text-shadow: 0 0 1rem currentColor;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee::after {
+  content: "";
+  background-image: linear-gradient(transparent, red);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.marquee>* {
+  animation: 10s marquee-animation linear infinite;
+}
+
+#mewo {
+  position: absolute;
+  box-shadow: none;
+  border-radius: 0;
+  left: 10%;
+  bottom: 100%;
+  transform: scale(0.25);
+  transform-origin: bottom left;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.25));
+  cursor: grab;
+}
+
+#oneko {
+  display: none;
+}
+
+#hue-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1024;
+  opacity: 0;
+  transition: 1s;
+}
+
+#hue-overlay.visible {
+  animation: hue-overlay-animation 1s linear infinite;
+  opacity: 1;
+}

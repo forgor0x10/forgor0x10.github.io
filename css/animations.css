@@ -1,0 +1,39 @@
+@keyframes background-animation {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 5rem 5rem;
+  }
+}
+
+@keyframes hue-overlay-animation {
+  0% {
+    backdrop-filter: hue-rotate(0);
+  }
+
+  100% {
+    backdrop-filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes typewriter-animation {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
