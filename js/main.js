@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const cards = document.querySelectorAll('#content-id .card');
-  console.log(cards);
 
   cards.forEach((card, index) => {
     setTimeout(() => {
@@ -67,25 +66,25 @@ document.getElementById('amen-break-button').addEventListener('click', () => {
 
   const selectedIndex = Math.floor(Math.random() * audioFiles.length);
 
-  const audio_element = document.getElementById('amen-break-audio');
-  audio_element.src = '/sound/amen_breaks/' + audioFiles[selectedIndex];
-  audio_element.controls = true;
-  audio_element.autoplay = true;
+  const audioElement = document.getElementById('amen-break-audio');
+  audioElement.src = '/sound/amen_breaks/' + audioFiles[selectedIndex];
+  audioElement.controls = true;
+  audioElement.autoplay = true;
 
-  const p_element = document.getElementById('amen-break-text');
-  p_element.innerHTML =
+  const pElement = document.getElementById('amen-break-text');
+  pElement.innerHTML =
       '<br>Congratulations!! You got ' + audioFiles[selectedIndex] + '!!';
 
   if (selectedIndex == 1) {
-    p_element.innerHTML += ' This is so szamar madar';
+    pElement.innerHTML += ' This is so szamar madar';
   } else if (selectedIndex == 3) {
-    p_element.innerHTML += ' This is so deep blue';
+    pElement.innerHTML += ' This is so deep blue';
   } else if (selectedIndex == 4) {
-    p_element.innerHTML += ' This is so into the fire';
+    pElement.innerHTML += ' This is so into the fire';
   } else if (selectedIndex == 12) {
-    p_element.innerHTML += ' This is so death odyssey';
+    pElement.innerHTML += ' This is so death odyssey';
   } else if (selectedIndex == 14) {
-    p_element.innerHTML += ' This is so unstoppable force';
+    pElement.innerHTML += ' This is so unstoppable force';
   }
 });
 
