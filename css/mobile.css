@@ -1,0 +1,10 @@
+@media (max-width: 600px) {
+  .content {
+    margin: 0 5%;
+    flex-direction: column;
+  }
+
+  .content>* {
+    width: auto;
+  }
+}
