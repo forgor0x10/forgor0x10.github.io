@@ -29,6 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.getElementById('mewo').addEventListener('click', () => {
+  const overlayElement = document.getElementById('omor-overlay');
+  if (!overlayElement) return;
+
+  const meowAudioElement = document.createElement('audio');
+  meowAudioElement.src = '/sound/meow.ogg';
+  meowAudioElement.play();
+
+  if (Math.random() < 0.1) {
+    setTimeout(() => {
+      const explosionAudioElement = document.createElement('audio');
+      explosionAudioElement.src = '/sound/explosion.ogg';
+      explosionAudioElement.play();
+
+      overlayElement.classList.add('visible');
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          overlayElement.classList.remove('visible');
+        });
+      });
+    }, 1000);
+  }
+});
+
 document.getElementById('amen-break-button').addEventListener('click', () => {
   const audioFiles = [
     'cw_amen01_175.wav', 'cw_amen02_165.wav', 'cw_amen03_167.wav',

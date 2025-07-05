@@ -69,3 +69,19 @@
   animation: hue-overlay-animation 1s linear infinite;
   opacity: 1;
 }
+
+#omor-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1024;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+#omor-overlay.visible {
+  opacity: 1;
+  transition: none;
+}
