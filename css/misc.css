@@ -32,6 +32,9 @@
 
 .marquee>* {
   animation: 10s marquee-animation linear infinite;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
 }
 
 #mewo {
