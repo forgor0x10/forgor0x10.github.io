@@ -1,8 +1,15 @@
 .typewriter {
-  margin: 0 auto;
-  animation: 1s typewriter-animation ease;
-  overflow: hidden;
-  white-space: nowrap;
+  position: relative;
+}
+
+.typewriter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--ctp-text);
+  pointer-events: none;
+  z-index: 1;
+  animation: 1s typewriter-animation forwards;
 }
 
 .glow {
