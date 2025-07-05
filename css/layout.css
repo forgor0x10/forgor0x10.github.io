@@ -56,6 +56,7 @@ footer::before {
   flex-direction: column;
   gap: 3rem;
   width: 0;
+  overflow-wrap: break-word;
 }
 
 .content>:nth-child(1) {
